@@ -1,0 +1,35 @@
+out_to_x no
+out_to_console yes
+short_units yes
+update_interval 1
+
+TEXT
+
+[\
+# BATTERY CHARGE
+{"full_text":"BAT","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${battery_percent}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+# CPU USAGE
+{"full_text":"CPU","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${cpu cpu0}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+{"full_text":"${cpu cpu1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+# Kernel:
+{"full_text":"KERNEL","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${kernel}","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+# CPU TEMP
+{"full_text":"TEMP","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${platform coretemp.0 temp 2}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+# MEM USED / TOTAL
+{"full_text":"MEM","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${mem} / ${memmax}","color":"\#FFFFFF","separator":false,"separator_block_width":6},\
+# DATE (DD-MM-YY)
+{"full_text":"DATE","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${time %d/%m/%y}","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+# TIME (HH-MM)
+{"full_text":"TIME","color":"\#d70a53","separator":false,"separator_block_width":6},\
+{"full_text":"${time %R}","color":"\#EEEEEE","separator":false}\
+],

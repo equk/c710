@@ -6,6 +6,7 @@ Acer Chromebook C7 / C710
 
 This repo holds configuration etc for running archlinux on the acer chromebook
 C7 / C710
+
 The chromebook is configured to boot linux only using a custom compiled coreboot
 BIOS image
 
@@ -39,18 +40,18 @@ Catch me on the archlinux or gentoo forum: equilibrium
 Main Apps
 =========
 
-Web Browser: Google Chrome
-File Manager: Thunar
-Twitter Client: Tweetdeck Web
-Desktop Stats: Conky
-Desktop Background: Nitrogen
-Text Editor: vim & Sublime Text 3
-Image Editor: Gimp
-Video Playback: VLC
-Launcher: dmenu
-Music Playback: DeaDBeeF
-Python IDE: PyCharm & vim & Sublime Text 3
-Email Client: Thunderbird + Enigmail
+    Web Browser: Google Chrome
+    File Manager: Thunar
+    Twitter Client: Tweetdeck Web
+    Desktop Stats: Conky
+    Desktop Background: Nitrogen
+    Text Editor: vim & Sublime Text 3
+    Image Editor: Gimp
+    Video Playback: VLC
+    Launcher: dmenu
+    Music Playback: DeaDBeeF
+    Python IDE: PyCharm & vim & Sublime Text 3
+    Email Client: Thunderbird + Enigmail
 
 
 Specific Configuration / Tweaks

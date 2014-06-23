@@ -1,0 +1,167 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+# equilibriumuk - equk.co.uk
+#
+# configuration for 2 x Dell P2414H 1080p monitors
+
+set $mod Mod4
+
+set $Alt Mod1
+set $Win Mod4
+
+# lockscreen
+bindsym $mod+l exec xscreensaver-command -lock
+
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec ~/bin/dmenu_launch
+bindsym Control+space exec ~/bin/dmenu_launch
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# set workspaces to specific monitor
+# DFP3 is left monitor
+#workspace 1 output DFP3
+#workspace 2 output DFP2
+#workspace 3 output DFP3
+#workspace 4 output DFP2
+#workspace 5 output DFP3
+#workspace 6 output DFP2
+#workspace 7 output DFP3
+#workspace 8 output DFP2
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec oblogout
+bindsym $mod+Shift+E exec ~/.i3/tk_logout.py
+
+#enable alt+tab
+bindsym $Alt+Tab focus right
+bindsym $Alt+Shift+Tab focus left
+
+# set application specific options
+# use 'xprop' or 'xwininfo' to get window information
+for_window [class="Xfce4-terminal"] border 1pixel
+for_window [class="Google-chrome-stable"] border 1pixel
+for_window [class="Xfce4-notifyd"] floating enable, border 1pixel
+for_window [class="Thunar"] floating enable
+for_window [class="Oblogout"] floating enable, border 1pixel
+for_window [class="I3-exit"] floating enable
+for_window [class="Chromium"] border 1pixel
+for_window [class="Vlc"] border 1pixel
+for_window [class="Tk" title="tk_logout"] floating enable, border 1pixel
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        #status_command  i3status
+        status_command ~/.i3/i3-conky
+        mode dock
+        position top
+        workspace_buttons yes
+        # status_command sh ~/.i3/status.sh
+        font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+        colors {
+            # <bar>
+            background #222222
+            separator  #d70a53
+            statusline #999999
+
+            # <workclass>       <border> <bg> <text>
+            focused_workspace   #da2263 #d70a53 #ffffff
+            active_workspace    #565656 #444444 #ffffff
+            inactive_workspace  #373737 #222222 #888888
+            urgent_workspace    #ec7ea4 #eb709b #ffffff
+        }
+}
+
+client.focused          #da2263 #d70a53 #ffffff #eb709b
+client.focused_inactive #565656 #444444 #ffffff #666666
+client.unfocused        #373737 #222222 #888888 #444444
+client.urgent           #ec7ea4 #eb709b #ffffff #eb709b
+
+# Autostart
+exec --no-startup-id ~/.i3/autostart.sh
+exec --no-startup-id numlockx
+# start daemons
+exec --no-startup-id xscreensaver -no-splash
+exec --no-startup-id thunar --daemon
+exec --no-startup-id parcellite
+exec --no-startup-id compton
+# set wallpaper
+exec --no-startup-id nitrogen --restore
+# start applications
+#exec thunderbird
+# start wicd for wifi
+exec --no-startup-id wicd-client --tray
+# start battery monitor
+exec --no-startup-id batterymon
+

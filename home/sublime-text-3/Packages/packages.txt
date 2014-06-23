@@ -1,0 +1,76 @@
+ASCII Decorator
+ASP
+Abacus
+ActionScript
+AdvancedNewFile
+AppleScript
+Batch File
+BracketHighlighter
+C#
+C++
+CSS
+Clojure
+Color Highlighter
+Color Scheme - Default
+D
+Diff
+EditorConfig
+Emmet
+Erlang
+FindKeyConflicts
+Gist
+Go
+Goto Documentation
+Graphviz
+Groovy
+HTML
+Handlebars
+Haskell
+IndentGuides
+Java
+JavaScript
+JsFormat
+KeymapManager
+LaTeX
+Language - English
+Lisp
+Lua
+Makefile
+Markdown
+Markdown Preview
+Matlab
+Nettuts+ Fetch
+OCaml
+Objective-C
+PHP
+Perl
+Prefixr
+PyV8
+Python
+Python Flake8 Lint
+Python PEP8 Autoformat
+R
+Rails
+Regular Expressions
+RestructuredText
+Ruby
+SQL
+Sass
+Scala
+ShellScript
+SideBarEnhancements
+SublimeLinter
+TCL
+Text
+Textile
+Theme - Default
+Theme - Soda
+TidyHTML5
+User
+Vintage
+XML
+YAML
+get_packages.sh
+jQuery
+jQuery Snippets pack
+snake_case

@@ -1,0 +1,14 @@
+#!/bin/sh
+ 
+# Send JSON Header
+echo '{"version":1}'
+ 
+# Begin array
+echo '['
+ 
+# Send an empty first array
+echo '[],'
+ 
+# Send conky
+exec conky -c /home/$USER/.i3/conkybar
+

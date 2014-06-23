@@ -1,0 +1,19 @@
+{
+	"color_scheme": "Packages/User/Monokai Soda (SL).tmTheme",
+	"font_face": "DejaVu Sans Mono",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true
+}
