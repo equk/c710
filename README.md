@@ -23,7 +23,7 @@ RAM has been upgraded to 4GB
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 3.14.8-1-ck
+    > Kernel: 3.14.10-1-ck
     > Shell: /usr/bin/zsh
     > Packages: 1010
     > WM: i3
@@ -74,7 +74,7 @@ WiFi / Bluetooth Tweaks:
 
 /etc/modprobe.d/ath9k.conf
 
-    options ath9k btcoex_enable=1 ps_enable=1 bt_ant_diversity=1 nohwcrypt=1
+    options ath9k btcoex_enable=1 ps_enable=1 bt_ant_diversity=1
 
 Graphics Configuration:
 
