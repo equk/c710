@@ -21,7 +21,7 @@ TEXT
 {"full_text":"${kernel}","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 # CPU TEMP
 {"full_text":"TEMP","color":"\#d70a53","separator":false,"separator_block_width":6},\
-{"full_text":"${platform coretemp.0 temp 2}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+{"full_text":"${hwmon 0 temp 2}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
 {"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 # MEM USED / TOTAL
 {"full_text":"MEM","color":"\#d70a53","separator":false,"separator_block_width":6},\
