@@ -11,6 +11,8 @@ The chromebook is configured to boot linux only using a custom compiled coreboot
 BIOS image
 
 RAM has been upgraded to 4GB
+HDD has been replaced with a fast 64GB SSD
+System is configured to run without any swap partition
 
 
             ,                       _     _ _
@@ -23,18 +25,23 @@ RAM has been upgraded to 4GB
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 3.14.10-1-ck
+    > Kernel: 3.15.6-1-ck
     > Shell: /usr/bin/zsh
-    > Packages: 1010
+    > Packages: 1013
     > WM: i3
     > GTK2 theme: Adwaita
     > GTK2 icon theme: Faenza-Dark
     > GTK2 font name: Cantarell 11
-    > RAM: 510M / 3888M (13%)
+    > RAM: 221M / 3888M (5%)
     > CPU: Intel(R) Celeron(R) CPU 847 @ 1.10GHz
+    > SSD: 64GB Sandisk Ultra Plus
+    > IO SCHED: bfq
 
 
 Catch me on the archlinux or gentoo forum: equilibrium
+
+	SSD Speed (hdparm -tT):
+	1400 MB in  3.00 seconds = 466.41 MB/sec
 
 
 Main Apps
@@ -98,4 +105,3 @@ Kernel:
 
     repo-ck/linux-ck-sandybridge
     repo-ck/linux-ck-sandybridge-headers
-
