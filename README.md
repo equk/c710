@@ -1,13 +1,10 @@
-c710
-====
-
 Acer Chromebook C7 / C710
 =========================
 
 This repo holds configuration etc for running archlinux on the acer chromebook
 C7 / C710
 
-The chromebook is configured to boot linux only using a custom compiled coreboot BIOS image
+The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/)
 
 RAM has been upgraded to 4GB
 
