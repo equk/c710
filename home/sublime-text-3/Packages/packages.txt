@@ -71,6 +71,8 @@ Vintage
 XML
 YAML
 get_packages.sh
+installed_packages.txt
 jQuery
 jQuery Snippets pack
+packages.txt
 snake_case
