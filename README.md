@@ -4,7 +4,10 @@ Acer Chromebook C7 / C710
 This repo holds configuration etc for running archlinux on the acer chromebook
 C7 / C710
 
-The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/)
+The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/Welcome_to_coreboot)
+
+You can find the coreboot source on the [chromium git repo](https://git.chromium.org/gitweb/?p=chromiumos/third_party/coreboot.git).
+I have the parrot variant (celeton 847), there are 2 variants so be careful.
 
 RAM has been upgraded to 4GB
 
@@ -23,7 +26,7 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 3.16.3-1-ck
+    > Kernel: 3.19.3-1-ck
     > Shell: /usr/bin/zsh
     > Packages: 1036
     > WM: i3
@@ -45,7 +48,7 @@ Catch me on the archlinux or gentoo forum: equilibrium
 Main Apps
 =========
 
-    Web Browser: Google Chrome
+    Web Browser: Google Chromium
     File Manager: Thunar
     Twitter Client: Tweetdeck Web
     Desktop Stats: Conky
