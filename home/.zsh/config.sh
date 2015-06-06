@@ -6,10 +6,6 @@ export TERMINAL="xfce4-terminal"
 export BROWSER="chromium"
 export HISTCONTROL="ignoredups"
 
-# grep options
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;32'
-
 # ls colors
 autoload colors; colors;
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
@@ -104,7 +100,6 @@ alias xorg='sudo subl /etc/X11/xorg.conf'
 alias nano='nano -w'
 alias ls='ls -hF --color=auto --group-directories-first '
 alias df='df -h -T'
-alias grep='grep -n --color=auto'
 alias duf='du -skh * | sort -n'
 # quick nmap scan over socks
 alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,6667 '
@@ -112,6 +107,28 @@ alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,6667 '
 alias http='python2 -m SimpleHTTPServer 8080'
 # minify style.css using cssutils from python
 alias cssminify='cssparse -m style.css > style.min.css'
+# update grub config
+alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+# kill all running windows executables
+alias killexe='kill $(pgrep .exe)'
+
+# Treesize view of current directory
+function treesize() {
+  du -k --max-depth=1 | sort -nr | awk '
+     BEGIN {
+        split("KB,MB,GB,TB", Units, ",");
+     }
+     {
+        u = 1;
+        while ($1 >= 1024) {
+           $1 = $1 / 1024;
+           u += 1
+        }
+        $1 = sprintf("%.1f %s", $1, Units[u]);
+        print $0;
+     }
+    '
+}
 
 # Extract
 function extract () {
@@ -144,49 +161,13 @@ PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 # Set GEM_HOME for bundler
 export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
 
-# archlinux specific Aliases
-
-function paclist() {
-  sudo pacman -Qei $(pacman -Qu|cut -d" " -f 1)|awk ' BEGIN {FS=":"}/^Name/{printf("\033[1;36m%s\033[1;37m", $2)}/^Description/{print $2}'
-}
+# remove orphaned/un-needed packages
+alias pacclean='sudo pacman -Rs $(pacman -Qqdt)'
+# remove unused packages in cache
+alias paccleanup='sudo pacman -Sc'
 
 alias paclsorphans='sudo pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
-
-function pacdisowned() {
-  tmp=${TMPDIR-/tmp}/pacman-disowned-$UID-$$
-  db=$tmp/db
-  fs=$tmp/fs
-
-  mkdir "$tmp"
-  trap  'rm -rf "$tmp"' EXIT
-
-  pacman -Qlq | sort -u > "$db"
-
-  find /bin /etc /lib /sbin /usr \
-      ! -name lost+found \
-        \( -type d -printf '%p/\n' -o -print \) | sort > "$fs"
-
-  comm -23 "$fs" "$db"
-}
-
-function pacmanallkeys() {
-  # Get all keys for developers and trusted users
-  curl https://www.archlinux.org/{developers,trustedusers}/ |
-  awk -F\" '(/pgp.mit.edu/) {sub(/.*search=0x/,"");print $1}' |
-  xargs sudo pacman-key --recv-keys
-}
-
-function pacmansignkeys() {
-  for key in $*; do
-    sudo pacman-key --recv-keys $key
-    sudo pacman-key --lsign-key $key
-    printf 'trust\n3\n' | sudo gpg --homedir /etc/pacman.d/gnupg \
-      --no-permission-warning --command-fd 0 --edit-key $key
-  done
-}
-
-### end archlinux specific
 
 function title() {
     local access
@@ -266,3 +247,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # set wine to always run 32bit
 export WINEPREFIX=$HOME/win32/
 export WINEARCH=win32
+
+# set hardware accel for VDPAU to nvidia
+export VDPAU_DRIVER=nvidia
