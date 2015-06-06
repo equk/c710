@@ -26,9 +26,9 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 3.19.3-1-ck
+    > Kernel: 4.0.4-2-EQUK
     > Shell: /usr/bin/zsh
-    > Packages: 1036
+    > Packages: 1060
     > WM: i3
     > GTK2 theme: Adwaita
     > GTK2 icon theme: Faenza-Dark
@@ -48,7 +48,7 @@ Catch me on the archlinux or gentoo forum: equilibrium
 Main Apps
 =========
 
-    Web Browser: Google Chromium
+    Web Browser: Google Chromium & Mozilla Firefox
     File Manager: Thunar
     Twitter Client: Tweetdeck Web
     Desktop Stats: Conky
