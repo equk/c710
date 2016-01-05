@@ -26,9 +26,9 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 4.0.4-2-EQUK
+    > Kernel: 4.3.3-2-EQUK
     > Shell: /usr/bin/zsh
-    > Packages: 1060
+    > Packages: 1089
     > WM: i3
     > GTK2 theme: Adwaita
     > GTK2 icon theme: Faenza-Dark
@@ -57,9 +57,10 @@ Main Apps
     Image Editor: Gimp
     Video Playback: VLC
     Launcher: dmenu
-    Music Playback: DeaDBeeF
+    Music Playback: Spotify or DeaDBeeF
     Python IDE: PyCharm & vim & Sublime Text 3
     Email Client: Thunderbird + Enigmail
+    IRC Client: irssi + hexchat
 
 
 Specific Configuration / Tweaks
