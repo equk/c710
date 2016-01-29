@@ -26,9 +26,9 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 4.3.3-2-EQUK
+    > Kernel: 4.3.3-3-EQUK
     > Shell: /usr/bin/zsh
-    > Packages: 1089
+    > Packages: 1094
     > WM: i3
     > GTK2 theme: Adwaita
     > GTK2 icon theme: Faenza-Dark
