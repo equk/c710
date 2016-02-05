@@ -3,7 +3,7 @@
 # Set Defaults
 export EDITOR="vim"
 export TERMINAL="xfce4-terminal"
-export BROWSER="chromium"
+export BROWSER="$HOME/bin/chrome"
 export HISTCONTROL="ignoredups"
 
 # ls colors
@@ -113,22 +113,7 @@ alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias killexe='kill $(pgrep .exe)'
 
 # Treesize view of current directory
-function treesize() {
-  du -k --max-depth=1 | sort -nr | awk '
-     BEGIN {
-        split("KB,MB,GB,TB", Units, ",");
-     }
-     {
-        u = 1;
-        while ($1 >= 1024) {
-           $1 = $1 / 1024;
-           u += 1
-        }
-        $1 = sprintf("%.1f %s", $1, Units[u]);
-        print $0;
-     }
-    '
-}
+alias treesize='du -h --max-depth=1 | sort -nr'
 
 # Extract
 function extract () {
@@ -241,6 +226,18 @@ if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
 
+# setup golang paths
+# main binary paths
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+# go projects path
+export GOPATH=$HOME/golang
+
+# setup local nodejs bin path
+if [ -d "$HOME/node/bin" ] ; then
+    export PATH="$HOME/node/bin:$PATH"
+fi
+
 # disables prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
@@ -248,3 +245,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WINEPREFIX=$HOME/win32/
 export WINEARCH=win32
 
+# set hardware accel for VDPAU to nvidia
+export VDPAU_DRIVER=nvidia
+
+# alias for new dnscrypt-proxy service
+alias dnscrypt-edit='sudo vim /usr/lib/systemd/system/dnscrypt-proxy.service'
+alias dnscrypt-resolvers='sed "s/,/\t/g" "/usr/share/dnscrypt-proxy/dnscrypt-resolvers.csv" | less -S'
