@@ -245,9 +245,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WINEPREFIX=$HOME/win32/
 export WINEARCH=win32
 
-# set hardware accel for VDPAU to nvidia
-export VDPAU_DRIVER=nvidia
-
 # alias for new dnscrypt-proxy service
 alias dnscrypt-edit='sudo vim /usr/lib/systemd/system/dnscrypt-proxy.service'
 alias dnscrypt-resolvers='sed "s/,/\t/g" "/usr/share/dnscrypt-proxy/dnscrypt-resolvers.csv" | less -S'
