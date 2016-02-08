@@ -6,7 +6,7 @@ C7 / C710
 
 The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/Welcome_to_coreboot)
 
-You can find the coreboot source on the [chromiumos git repo](https://git.chromium.org/gitweb/chromiumos/third_party/coreboot.git).
+You can find the coreboot source on the [chromiumos fork of coreboot](https://chromium.googlesource.com/chromiumos/third_party/coreboot).
 I have the parrot variant (celeton 847), there are 2 variants so be careful.
 
 RAM has been upgraded to 4GB
