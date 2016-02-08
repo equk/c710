@@ -6,7 +6,7 @@ C7 / C710
 
 The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/Welcome_to_coreboot)
 
-You can find the coreboot source on the [chromium git repo](https://git.chromium.org/gitweb/?p=chromiumos/third_party/coreboot.git).
+You can find the coreboot source on the [chromiumos git repo](https://git.chromium.org/gitweb/?p=chromiumos/third_party/coreboot.git).
 I have the parrot variant (celeton 847), there are 2 variants so be careful.
 
 RAM has been upgraded to 4GB
@@ -57,7 +57,7 @@ Main Apps
     Image Editor: Gimp
     Video Playback: VLC
     Launcher: dmenu
-    Music Playback: Spotify or DeaDBeeF
+    Music Playback: Spotify
     Python IDE: PyCharm & vim & Sublime Text 3
     Email Client: Thunderbird + Enigmail
     IRC Client: irssi + hexchat
