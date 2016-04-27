@@ -1,5 +1,4 @@
-Acer Chromebook C7 / C710
-=========================
+#Acer Chromebook C7 / C710
 
 This repo holds configuration etc for running archlinux on the acer chromebook
 C7 / C710
@@ -26,7 +25,7 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 4.4.1-2-EQUK
+    > Kernel: 4.5.1-1-EQUK
     > Shell: /usr/bin/zsh
     > Packages: 1099
     > WM: i3
@@ -41,12 +40,11 @@ System is configured to run without any swap partition
 
 Catch me on the archlinux or gentoo forum: equilibrium
 
-	SSD Speed (hdparm -tT):
-	1400 MB in  3.00 seconds = 466.41 MB/sec
+    SSD Speed (hdparm -tT):
+    1400 MB in  3.00 seconds = 466.41 MB/sec
 
 
-Main Apps
-=========
+##Main Apps
 
     Web Browser: Google Chromium & Mozilla Firefox
     File Manager: Thunar
@@ -63,8 +61,7 @@ Main Apps
     IRC Client: irssi + hexchat
 
 
-Specific Configuration / Tweaks
-===============================
+##Specific Configuration / Tweaks
 
 Synaptics Tweaks:
 
@@ -107,3 +104,10 @@ Kernel:
 
     repo-ck/linux-ck-sandybridge
     repo-ck/linux-ck-sandybridge-headers
+
+##Coreboot Resources
+
+Some links you may find helpful for building coreboot.
+
+* [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
+* [Coreboot Payloads](https://www.coreboot.org/Payloads)
