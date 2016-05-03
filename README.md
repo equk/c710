@@ -5,7 +5,7 @@ C7 / C710
 
 The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/)
 
-I have the parrot variant (celeton 847), there are 2 variants so be careful.
+I have the parrot variant (celeron 847), there are 2 variants so be careful.
 
 RAM has been upgraded to 4GB
 
@@ -110,3 +110,27 @@ Some links you may find helpful for building coreboot.
 
 * [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
 * [Coreboot Payloads](https://www.coreboot.org/Payloads)
+
+##Coreboot Compile Output
+
+    Performing operation on 'COREBOOT' region...
+    Name                           Offset     Type         Size
+    cbfs master header             0x0        cbfs header  32
+    cpu_microcode_blob.bin         0x80       microcode    22528
+    config                         0x5900     raw          248
+    revision                       0x5a40     raw          569
+    cmos_layout.bin                0x5cc0     cmos_layout  1412
+    fallback/dsdt.aml              0x6280     raw          12867
+    payload_config                 0x9540     raw          1563
+    payload_revision               0x9bc0     raw          233
+    (empty)                        0x9d00     null         25176
+    fallback/romstage              0xff80     stage        68868
+    fallback/payload               0x20d00    payload      61118
+    (empty)                        0x2fc00    null         664
+    mrc.cache                      0x2fec0    mrc_cache    65536
+    fallback/ramstage              0x3ff00    stage        69806
+    pci8086,0106.rom               0x51000    optionrom    65536
+    (empty)                        0x61080    null         648792
+    bootblock                      0xff700    bootblock    1952
+
+    Built google/parrot (Parrot)
