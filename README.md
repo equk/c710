@@ -24,9 +24,9 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 4.5.1-1-EQUK
+    > Kernel: 4.7.6-1-EQUK
     > Shell: /usr/bin/zsh
-    > Packages: 1099
+    > Packages: 1123
     > WM: i3
     > GTK2 theme: Adwaita
     > GTK2 icon theme: Faenza-Dark
@@ -45,17 +45,17 @@ Catch me on the archlinux or gentoo forum: equilibrium
 
 ##Main Apps
 
-    Web Browser: Google Chromium & Mozilla Firefox
+    Web Browser: Google Chromium
     File Manager: Thunar
     Twitter Client: Tweetdeck Web
     Desktop Stats: Conky
     Desktop Background: Nitrogen
-    Text Editor: vim & Sublime Text 3
+    Text Editor: vim & atom
     Image Editor: Gimp
     Video Playback: VLC
     Launcher: dmenu
-    Music Playback: Spotify
-    Python IDE: PyCharm & vim & Sublime Text 3
+    Music Playback: Deadbeef
+    Python IDE: PyCharm & vim & atom
     Email Client: Thunderbird + Enigmail
     IRC Client: irssi + hexchat
 
