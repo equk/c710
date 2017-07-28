@@ -1,78 +1,72 @@
-ASCII Decorator
-ASP
 Abacus
 ActionScript
 AdvancedNewFile
 AppleScript
+ASCII Decorator
+ASP
+backrefs
 Batch File
-BracketHighlighter
+bz2
 C#
 C++
-CSS
+C Improved
 Clojure
-Color Highlighter
 Color Scheme - Default
+CSS
 D
 Diff
-EditorConfig
-Emmet
 Erlang
-FindKeyConflicts
-Gist
+get_packages.sh
 Go
-Goto Documentation
+GoSublime
 Graphviz
 Groovy
-HTML
-Handlebars
 Haskell
+HTML
 IndentGuides
 Java
 JavaScript
-JsFormat
+jQuery Snippets pack
 KeymapManager
-LaTeX
 Language - English
+LaTeX
 Lisp
 Lua
 Makefile
 Markdown
-Markdown Preview
+markupsafe
 Matlab
-Nettuts+ Fetch
-OCaml
+mdpopups
 Objective-C
-PHP
+OCaml
+packages.txt
 Perl
+PHP
 Prefixr
-PyV8
+pygments
 Python
 Python Flake8 Lint
+python-jinja2
+python-markdown
 Python PEP8 Autoformat
+PyV8
+pyyaml
 R
 Rails
 Regular Expressions
 RestructuredText
 Ruby
-SQL
-Sass
 Scala
 ShellScript
-SideBarEnhancements
+SQL
+ssl-linux
 SublimeLinter
 TCL
 Text
 Textile
 Theme - Default
-Theme - Soda
 TidyHTML5
 User
 Vintage
 XML
 YAML
-get_packages.sh
-installed_packages.txt
-jQuery
-jQuery Snippets pack
-packages.txt
-snake_case

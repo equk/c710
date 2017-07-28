@@ -153,6 +153,3 @@ if [ -z "$DISPLAY" ] && [ $(tty) == /dev/tty1 ]; then
 	startx
 fi
 
-# Set path
-PATH='/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/dassault-systemes/draftsight/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:~/.gem/ruby/2.0.0/bin:/opt/android-sdk/platform-tools'
-export PATH

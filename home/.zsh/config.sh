@@ -102,7 +102,9 @@ alias ls='ls -hF --color=auto --group-directories-first '
 alias df='df -h -T'
 alias duf='du -skh * | sort -n'
 # quick nmap scan over socks
-alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,6667 '
+alias pscan='proxychains nmap -sTV -PN -n -p21,22,25,80,3306,3389 '
+# start pcap split into 5min chunks (max 50min)
+alias pcap='sudo tcpdump -G 300 -w $HOME/pcaps/%Y-%m-%d_%H:%M.pcap -W 10'
 # http server for testing static content
 alias http='python2 -m SimpleHTTPServer 8080'
 # minify style.css using cssutils from python
@@ -114,6 +116,15 @@ alias killexe='kill $(pgrep .exe)'
 
 # Treesize view of current directory
 alias treesize='du -h --max-depth=1 | sort -nr'
+
+# Wget open directory
+alias wgeto='wget -H -r --level=1 -k -p '
+
+# atom aliases
+#alias atom='atom-beta'
+# temp sublime text aliases (while switching)
+#alias subl='atom'
+#alias subl3='atom'
 
 # Extract
 function extract () {
@@ -153,6 +164,8 @@ alias paccleanup='sudo pacman -Sc'
 
 alias paclsorphans='sudo pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
+# use yay instead of yaourt
+alias yaourt='yay'
 
 function title() {
     local access
@@ -232,10 +245,17 @@ export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 # go projects path
 export GOPATH=$HOME/golang
+# adding binary path for golang projects
+export PATH=$PATH:$GOPATH/bin
 
 # setup local nodejs bin path
 if [ -d "$HOME/node/bin" ] ; then
     export PATH="$HOME/node/bin:$PATH"
+fi
+
+# setup local rust (cargo) bin path
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # disables prompt mangling in virtual_env/bin/activate
@@ -247,4 +267,7 @@ export WINEARCH=win32
 
 # alias for new dnscrypt-proxy service
 alias dnscrypt-edit='sudo vim /usr/lib/systemd/system/dnscrypt-proxy.service'
-alias dnscrypt-resolvers='sed "s/,/\t/g" "/usr/share/dnscrypt-proxy/dnscrypt-resolvers.csv" | less -S'
+alias dnscrypt-resolvers='column -s, -t < "/usr/share/dnscrypt-proxy/dnscrypt-resolvers.csv" | less -#5 -N -S'
+
+# set QEMU to use ALSA for audio
+export QEMU_AUDIO_DRV=alsa
