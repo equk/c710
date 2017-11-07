@@ -1,4 +1,4 @@
-#Acer Chromebook C7 / C710
+# Acer Chromebook C7 / C710
 
 This repo holds configuration etc for running archlinux on the acer chromebook
 C7 / C710
@@ -43,7 +43,7 @@ Catch me on the archlinux or gentoo forum: equilibrium
     1400 MB in  3.00 seconds = 466.41 MB/sec
 
 
-##Main Apps
+## Main Apps
 
     Web Browser: Google Chromium
     File Manager: Thunar
@@ -60,7 +60,7 @@ Catch me on the archlinux or gentoo forum: equilibrium
     IRC Client: irssi + hexchat
 
 
-##Specific Configuration / Tweaks
+## Specific Configuration / Tweaks
 
 Synaptics Tweaks:
 
@@ -104,14 +104,14 @@ Kernel:
     repo-ck/linux-ck-sandybridge
     repo-ck/linux-ck-sandybridge-headers
 
-##Coreboot Resources
+## Coreboot Resources
 
 Some links you may find helpful for building coreboot.
 
 * [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
 * [Coreboot Payloads](https://www.coreboot.org/Payloads)
 
-##Coreboot Compile Output
+## Coreboot Compile Output
 
     Performing operation on 'COREBOOT' region...
     Name                           Offset     Type         Size
