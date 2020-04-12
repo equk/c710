@@ -1,18 +1,24 @@
 # Acer Chromebook C7 / C710
 
-This repo holds configuration etc for running archlinux on the acer chromebook
-C7 / C710
+This repo holds configuration etc for running archlinux on the Acer Chromebook C7 / C710 (Parrot 🦜)
 
-The chromebook is configured to boot linux only using a custom compiled [coreboot BIOS image](http://www.coreboot.org/)
+The chromebook is configured to boot linux using a custom compiled [coreboot BIOS image](http://www.coreboot.org/)
 
-I have the parrot variant (celeron 847), there are 2 variants so be careful.
+## Table of Contents
+
+* [Specification](#specs)
+* [Linux Configuration / Tweaks](#specific-configuration--tweaks)
+* [Coreboot Resources](#coreboot-resources)
+* [Coreboot Config (UEFI Tianocore Payload)](#coreboot-config-uefi-tianocore-payload)
+* [Coreboot Compile Output](#coreboot-compile-output)
+
+## Specs
+
+I have the 🦜parrot variant (celeron 847).
 
 RAM has been upgraded to 4GB
 
 HDD has been replaced with a fast 64GB SSD
-
-System is configured to run without any swap partition
-
 
             ,                       _     _ _
            /#\        __ _ _ __ ___| |__ | (_)_ __  _   ___  __
@@ -24,9 +30,7 @@ System is configured to run without any swap partition
      /`           `\
 
     > OS: Arch Linux x86_64
-    > Kernel: 4.9.6-1-EQUK
     > Shell: /usr/bin/zsh
-    > Packages: 1126
     > WM: i3
     > GTK2 theme: Adwaita
     > GTK2 icon theme: Faenza-Dark
@@ -34,35 +38,16 @@ System is configured to run without any swap partition
     > RAM: 221M / 3888M (5%)
     > CPU: Intel(R) Celeron(R) CPU 847 @ 1.10GHz
     > SSD: 64GB Sandisk Ultra Plus
-    > IO SCHED: bfq
 
 
-Catch me on the archlinux or gentoo forum: equilibrium
+Catch me on the archlinux or gentoo forum: `equilibrium`
 
     SSD Speed (hdparm -tT):
     1400 MB in  3.00 seconds = 466.41 MB/sec
 
-
-## Main Apps
-
-    Web Browser: Google Chromium
-    File Manager: Thunar
-    Twitter Client: Tweetdeck Web
-    Desktop Stats: Conky
-    Desktop Background: Nitrogen
-    Text Editor: vim & atom
-    Image Editor: Gimp
-    Video Playback: VLC
-    Launcher: dmenu
-    Music Playback: Deadbeef
-    Python IDE: PyCharm & vim & atom
-    Email Client: Thunderbird + Enigmail
-    IRC Client: irssi + hexchat
-
-
 ## Specific Configuration / Tweaks
 
-Synaptics Tweaks:
+### Synaptics Tweaks:
 
 /etc/X11/xorg.conf.d/10-cros-touchpad.conf
 
@@ -75,15 +60,15 @@ Synaptics Tweaks:
         Option          "FingerHigh" "25"
     EndSection
 
-WiFi / Bluetooth Tweaks:
+### WiFi / Bluetooth Tweaks:
 
-/etc/modprobe.d/ath9k.conf
+`/etc/modprobe.d/ath9k.conf`
 
     options ath9k btcoex_enable=1 ps_enable=1 bt_ant_diversity=1
 
-Graphics Configuration:
+### Graphics Configuration:
 
-/etc/X11/xorg.conf.d/20-intel.conf
+`/etc/X11/xorg.conf.d/20-intel.conf`
 
     Section "Device"
         Identifier  "Intel Graphics"
@@ -92,17 +77,12 @@ Graphics Configuration:
         Option      "TearFree"  "true"
     EndSection
 
-GPU Packages:
+### GPU Packages:
 
     extra/intel-dri
     extra/libva-intel-driver
     extra/xf86-video-intel
     multilib/lib32-intel-dri
-
-Kernel:
-
-    repo-ck/linux-ck-sandybridge
-    repo-ck/linux-ck-sandybridge-headers
 
 ## Coreboot Resources
 
@@ -112,7 +92,7 @@ Some links you may find helpful for building coreboot.
 * [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
 * [Coreboot Payloads](https://doc.coreboot.org/payloads.html)
 
-## Coreboot Config (UEFI Tianocore Payload)
+## Coreboot Config (UEFI Tianocore)
 
     CONFIG_USE_BLOBS=y
     CONFIG_VENDOR_GOOGLE=y
@@ -154,3 +134,9 @@ Some links you may find helpful for building coreboot.
     bootblock                      0xff700    bootblock    1952
 
     Built google/parrot (Parrot)
+
+# Contact
+
+Website: https://equk.co.uk
+
+Twitter: [@equilibriumuk](https://twitter.com/equilibriumuk)
