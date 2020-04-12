@@ -108,8 +108,9 @@ Kernel:
 
 Some links you may find helpful for building coreboot.
 
+* [Coreboot Docs](https://doc.coreboot.org/)
 * [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
-* [Coreboot Payloads](https://www.coreboot.org/Payloads)
+* [Coreboot Payloads](https://doc.coreboot.org/payloads.html)
 
 ## Coreboot Config (UEFI Tianocore Payload)
 
