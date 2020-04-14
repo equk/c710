@@ -9,8 +9,6 @@ The chromebook is configured to boot linux using a custom compiled [coreboot BIO
 * [Specification](#specs)
 * [Linux Configuration / Tweaks](#specific-configuration--tweaks)
 * [Coreboot Resources](#coreboot-resources)
-* [Coreboot Config (UEFI Tianocore Payload)](#coreboot-config-uefi-tianocore-payload)
-* [Coreboot Compile Output](#coreboot-compile-output)
 
 ## Specs
 
@@ -91,49 +89,6 @@ Some links you may find helpful for building coreboot.
 * [Coreboot Docs](https://doc.coreboot.org/)
 * [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
 * [Coreboot Payloads](https://doc.coreboot.org/payloads.html)
-
-## Coreboot Config (UEFI Tianocore)
-
-    CONFIG_USE_BLOBS=y
-    CONFIG_VENDOR_GOOGLE=y
-    CONFIG_NO_POST=y
-    CONFIG_INTEL_GMA_VBT_FILE="blobs/mainboard/google/parrot/vbt.bin"
-    CONFIG_CBFS_SIZE=0x250000
-    CONFIG_IFD_BIN_PATH="blobs/mainboard/google/parrot/flashdescriptor.bin"
-    CONFIG_ME_BIN_PATH="blobs/mainboard/google/parrot/me.bin"
-    CONFIG_BOARD_GOOGLE_PARROT=y
-    # CONFIG_DRIVERS_UART_8250IO is not set
-    CONFIG_PCIEXP_L1_SUB_STATE=y
-    CONFIG_CPU_MICROCODE_CBFS_EXTERNAL_BINS=y
-    CONFIG_CPU_UCODE_BINARIES="blobs/soc/intel/ivb/cpu_microcode_blob.bin"
-    # CONFIG_USE_NATIVE_RAMINIT is not set
-    CONFIG_LOCK_MANAGEMENT_ENGINE=y
-    CONFIG_INTEL_GMA_ADD_VBT=y
-    CONFIG_PAYLOAD_TIANOCORE=y
-
-## Coreboot Compile Output
-
-    Performing operation on 'COREBOOT' region...
-    Name                           Offset     Type         Size
-    cbfs master header             0x0        cbfs header  32
-    cpu_microcode_blob.bin         0x80       microcode    22528
-    config                         0x5900     raw          248
-    revision                       0x5a40     raw          569
-    cmos_layout.bin                0x5cc0     cmos_layout  1412
-    fallback/dsdt.aml              0x6280     raw          12867
-    payload_config                 0x9540     raw          1563
-    payload_revision               0x9bc0     raw          233
-    (empty)                        0x9d00     null         25176
-    fallback/romstage              0xff80     stage        68868
-    fallback/payload               0x20d00    payload      61118
-    (empty)                        0x2fc00    null         664
-    mrc.cache                      0x2fec0    mrc_cache    65536
-    fallback/ramstage              0x3ff00    stage        69806
-    pci8086,0106.rom               0x51000    optionrom    65536
-    (empty)                        0x61080    null         648792
-    bootblock                      0xff700    bootblock    1952
-
-    Built google/parrot (Parrot)
 
 # Contact
 
