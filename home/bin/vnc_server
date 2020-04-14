@@ -1,4 +1,0 @@
-#!/bin/bash
-
-x0vncserver -passwordfile ~/.vnc/passwd
-
