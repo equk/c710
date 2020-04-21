@@ -9,6 +9,8 @@ The chromebook is configured to boot linux using a custom compiled [coreboot BIO
 * [Specification](#specs)
 * [Linux Configuration / Tweaks](#specific-configuration--tweaks)
 * [Coreboot Resources](#coreboot-resources)
+* [Dotfiles Patch](#dotfiles-patch)
+* [Contact](#contact)
 
 ## Specs
 
@@ -89,6 +91,12 @@ Some links you may find helpful for building coreboot.
 * [Coreboot Docs](https://doc.coreboot.org/)
 * [Building Coreboot](https://www.coreboot.org/Build_HOWTO)
 * [Coreboot Payloads](https://doc.coreboot.org/payloads.html)
+
+## Dotfiles Patch
+
+`./dotfiles/c710.patch`
+
+As I mostly keep my [dotfiles](https://github.com/equk/dotfiles) repo updated I have provided a patch for c710 specific changes.
 
 # Contact
 
