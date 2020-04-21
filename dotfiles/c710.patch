@@ -1,0 +1,47 @@
+diff --git a/configs/.config/alacritty/alacritty.yml b/configs/.config/alacritty/alacritty.yml
+index d5ac34e..bed59dd 100644
+--- a/configs/.config/alacritty/alacritty.yml
++++ b/configs/.config/alacritty/alacritty.yml
+@@ -86,7 +86,7 @@ font:
+     # style: Italic
+
+   # Point size of the font
+-  size: 11.0
++  size: 9.0
+
+   # Offset is the extra space around each character. offset.y can be thought of
+   # as modifying the linespacing, and offset.x as modifying the letter spacing.
+diff --git a/configs/.i3/config b/configs/.i3/config
+index dcc569c..469b57a 100644
+--- a/configs/.i3/config
++++ b/configs/.i3/config
+@@ -173,7 +173,7 @@ bar {
+         mode dock
+         position top
+         workspace_buttons yes
+-        tray_output DisplayPort-1
++        # tray_output DisplayPort-1
+         font -*-terminus-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+         colors {
+             # <bar>
+diff --git a/configs/.i3/conkybar b/configs/.i3/conkybar
+index f689100..d27b5b6 100644
+--- a/configs/.i3/conkybar
++++ b/configs/.i3/conkybar
+@@ -12,12 +12,12 @@ TEXT
+ {"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+ # CPU TEMP
+ {"full_text":"@","color":"\#C792EA","separator":false,"separator_block_width":6},\
+-{"full_text":"${hwmon 3 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
++{"full_text":"${hwmon 0 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+ {"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+ # GPU TEMP
+-{"full_text":"GPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
+-{"full_text":"${hwmon 1 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
+-{"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
++#{"full_text":"GPU","color":"\#C792EA","separator":false,"separator_block_width":6},\
++#{"full_text":"${hwmon 1 temp 1}","color":"\#FFFFFF","separator":false,"separator_block_width":0},\
++#{"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+ # MEM USED / TOTAL
+ {"full_text":"MEM","color":"\#C792EA","separator":false,"separator_block_width":6},\
+ {"full_text":"${mem} / ${memmax}","color":"\#FFFFFF","separator":false,"separator_block_width":6},\
