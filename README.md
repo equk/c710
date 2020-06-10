@@ -6,6 +6,8 @@ The chromebook is configured to boot linux using a custom compiled [coreboot BIO
 
 ![](./img/coreboot.svg)
 
+More Info: [Building Coreboot in 2020](https://equk.co.uk/2020/04/19/building-coreboot-2020)
+
 ## Table of Contents
 
 * [Specification](#specs)
