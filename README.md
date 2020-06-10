@@ -4,6 +4,8 @@ This repo holds configuration etc for running archlinux on the Acer Chromebook C
 
 The chromebook is configured to boot linux using a custom compiled [coreboot BIOS image](http://www.coreboot.org/)
 
+![](./img/coreboot.svg)
+
 ## Table of Contents
 
 * [Specification](#specs)
